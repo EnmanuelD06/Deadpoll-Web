@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Deadpoll - Los mejores hot dogs artesanales de la ciudad. Ingredientes premium y preparación artesanal.">
+    <meta name="keywords" content="hot dogs, perros calientes, comida rápida, gourmet, artesanal">
+    <meta name="author" content="Deadpoll">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Deadpoll - Hot Dogs Premium">
+    <meta property="og:description" content="Los mejores hot dogs artesanales de la ciudad">
+    <meta property="og:image" content="Recursos/logo.png">
+    <meta property="og:url" content="https://deadpoll.com">
+    <title>Deadpoll - Hot Dogs Premium</title>
+    <!-- Precargar recursos críticos -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="Recursos/logo.png" as="image">
+    
+    <!-- Cargar fuentes de manera optimizada -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Cargar estilos -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
+    
+    <!-- Fallback para Font Awesome y AOS -->
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    </noscript>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Recursos/favicon.png">
+    <link rel="apple-touch-icon" href="Recursos/apple-touch-icon.png">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <header class="header-fixed" role="banner">
+        <nav role="navigation" aria-label="Navegación principal">
+            <div class="logo">
+                <img src="Recursos/logo.png" alt="Logo Deadpoll" class="logo-img" width="50" height="50" loading="eager">
+                <h1>Deadpoll</h1>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio" aria-current="page">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#especialidades">Especialidades</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section id="inicio" class="hero" aria-label="Sección de inicio">
+            <div class="hero-content" data-aos="fade-up">
+                <h2>Los Mejores Hot Dogs Gourmet</h2>
+                <p>¡Descubre una experiencia única con nuestros perros calientes artesanales!</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="cta-button primary">Ver Menú</a>
+                    <a href="#contacto" class="cta-button secondary">Contáctanos</a>
+                </div>
+            </div>
+            <div class="hero-overlay" aria-hidden="true"></div>
+        </section>
+
+        <section id="menu" class="menu-section" aria-label="Sección de menú">
+            <h2 data-aos="fade-up">Nuestro Menú</h2>
+            <div class="menu-grid">
+                <article class="menu-item" data-category="clasicos" data-aos="fade-up">
+                    <div class="menu-image">
+                        <img src="Recursos/perros.jpg" alt="Perro Caliente Clásico" width="300" height="200" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-info">
+                            <h3>Perro Caliente Clásico</h3>
+                            <p>Pan, salchicha, salsas de tomate, cheddar, maíz y ajo, mayonesa, papitas y queso parmesano</p>
+                            <div class="menu-footer">
+                                <span class="price">$0.99</span>
+                                <a href="https://wa.me/584128246904?text=Hola,%20me%20gustaría%20ordenar%20un%20Perro%20Caliente%20Clásico" 
+                                   class="whatsapp-button" 
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   aria-label="Ordenar Perro Caliente Clásico por WhatsApp">
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i> Ordenar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-item" data-category="especiales" data-aos="fade-up">
+                    <div class="menu-image">
+                        <img src="Recursos/perros 2.jpg" alt="Perro Caliente Special" width="300" height="200" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-info">
+                            <h3>Perro Caliente Special</h3>
+                            <p>Pan premium, salchicha artesanal, salsas secretas, ensalada cocida, papitas fritas y queso llanero</p>
+                            <div class="menu-footer">
+                                <span class="price">$1.30</span>
+                                <a href="https://wa.me/584128246904?text=Hola,%20me%20gustaría%20ordenar%20un%20Perro%20Caliente%20Special" 
+                                   class="whatsapp-button" 
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   aria-label="Ordenar Perro Caliente Special por WhatsApp">
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i> Ordenar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="especialidades" class="specialties-section" aria-label="Nuestras especialidades">
+            <h2 data-aos="fade-up">Nuestras Especialidades</h2>
+            <div class="specialties-grid">
+                <article class="specialty-card" data-aos="fade-up">
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    <h3>Ingredientes Premium</h3>
+                    <p>Seleccionamos los mejores ingredientes para garantizar la calidad</p>
+                </article>
+                <article class="specialty-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-clock" aria-hidden="true"></i>
+                    <h3>Entrega Rápida</h3>
+                    <p>Tu pedido llega caliente y fresco en tiempo récord</p>
+                </article>
+                <article class="specialty-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-heart" aria-hidden="true"></i>
+                    <h3>Hecho con Amor</h3>
+                    <p>Cada hot dog se prepara con dedicación y pasión</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="nosotros" class="about-section" aria-label="Sobre nosotros">
+            <div class="about-content" data-aos="fade-up">
+                <div class="about-text-container">
+                    <h2>Nuestra Historia</h2>
+                    <p>En Deadpoll, nos apasiona servir los mejores perros calientes de la ciudad. Hemos estado perfeccionando nuestras recetas y seleccionando los ingredientes más frescos y de alta calidad para garantizar el mejor sabor en cada bocado.</p>
+                    <p>Nuestro compromiso con la calidad y el servicio nos ha convertido en el lugar favorito para los amantes de los hot dogs en la ciudad.</p>
+                </div>
+                <div class="about-image-container" data-aos="fade-left">
+                    <img src="Recursos/logo.png" alt="Nuestro Local" width="400" height="400" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonios" class="testimonials-section" aria-label="Testimonios de clientes">
+            <h2 data-aos="fade-up">Lo que dicen nuestros clientes</h2>
+            <div class="testimonials-slider" role="region" aria-label="Carrusel de testimonios">
+                <!-- Los testimonios se cargarán dinámicamente con JavaScript -->
+            </div>
+        </section>
+
+        <section id="contacto" class="contact-section" aria-label="Información de contacto">
+            <h2 data-aos="fade-up">Contacto</h2>
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <div>
+                            <h3>Ubicación</h3>
+                            <p>Sector José Antonio Anzoátegui, 1 callé Ayacucho, Clarines 0800, Anzoátegui</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>+584128246904</p>
+                            <img src="Recursos/qr.png" alt="Código QR para ordenar por WhatsApp" class="qr-code" width="150" height="150" loading="lazy">
+                            <p class="qr-text">WhatsApp</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>perroscalientedeadpoll@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm" aria-label="Formulario de contacto">
+                        <div class="form-group">
+                            <label for="message" class="visually-hidden">Mensaje</label>
+                            <textarea id="message" name="message" required placeholder="Mensaje" aria-required="true"></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Deadpoll</h3>
+                <p>Los mejores hot dogs artesanales de la ciudad</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <nav aria-label="Enlaces rápidos del pie de página">
+                    <ul>
+                        <li><a href="#menu">Menú</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links" aria-label="Enlaces a redes sociales">
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <time datetime="2025">2025</time> Deadpoll. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </a>
+
+    <a href="https://wa.me/584128246904" 
+       class="whatsapp-float" 
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <!-- Optimizar carga de scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html> 
