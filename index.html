@@ -76,10 +76,17 @@
 
         <section id="menu" class="menu-section" aria-label="Sección de menú">
             <h2 data-aos="fade-up">Nuestro Menú</h2>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="todos">Todos</button>
+                <button class="category-btn" data-category="clasicos">Clásicos</button>
+                <button class="category-btn" data-category="especiales">Especiales</button>
+                <button class="category-btn" data-category="gourmet">Gourmet</button>
+            </div>
             <div class="menu-grid">
                 <article class="menu-item" data-category="clasicos" data-aos="fade-up">
                     <div class="menu-image">
                         <img src="Recursos/perros.jpg" alt="Perro Caliente Clásico" width="300" height="200" loading="lazy">
+                        <div class="menu-badge">Popular</div>
                     </div>
                     <div class="menu-content">
                         <div class="menu-info">
@@ -101,6 +108,7 @@
                 <article class="menu-item" data-category="especiales" data-aos="fade-up">
                     <div class="menu-image">
                         <img src="Recursos/perros 2.jpg" alt="Perro Caliente Special" width="300" height="200" loading="lazy">
+                        <div class="menu-badge">Especial</div>
                     </div>
                     <div class="menu-content">
                         <div class="menu-info">
@@ -158,8 +166,59 @@
 
         <section id="testimonios" class="testimonials-section" aria-label="Testimonios de clientes">
             <h2 data-aos="fade-up">Lo que dicen nuestros clientes</h2>
-            <div class="testimonials-slider" role="region" aria-label="Carrusel de testimonios">
-                <!-- Los testimonios se cargarán dinámicamente con JavaScript -->
+            <div class="testimonials-container">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-header">
+                        <div class="testimonial-info">
+                            <h3>María González</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Los mejores hot dogs que he probado. La calidad de los ingredientes es excepcional y el servicio es rápido y amable."</p>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-header">
+                        <div class="testimonial-info">
+                            <h3>Carlos Rodríguez</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"El Perro Caliente Gourmet es una experiencia única. La combinación de sabores es perfecta y la presentación es impecable."</p>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-header">
+                        <div class="testimonial-info">
+                            <h3>Ana Martínez</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Excelente servicio al cliente y los hot dogs siempre llegan calientes y deliciosos. Definitivamente mi lugar favorito para pedir."</p>
+                </div>
+            </div>
+            <div class="testimonials-cta">
+                <a href="https://wa.me/584128246904" class="cta-button primary" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> ¡Ordena Ahora!
+                </a>
             </div>
         </section>
 
@@ -194,10 +253,12 @@
                 <div class="contact-form" data-aos="fade-left">
                     <form id="contactForm" aria-label="Formulario de contacto">
                         <div class="form-group">
-                            <label for="message" class="visually-hidden">Mensaje</label>
-                            <textarea id="message" name="message" required placeholder="Mensaje" aria-required="true"></textarea>
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" required placeholder="Tu mensaje"></textarea>
                         </div>
-                        <button type="submit" class="submit-button">Enviar Mensaje</button>
+                        <button type="submit" class="submit-button">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
                     </form>
                 </div>
             </div>
@@ -223,9 +284,9 @@
             <div class="footer-section">
                 <h3>Síguenos</h3>
                 <div class="social-links" aria-label="Enlaces a redes sociales">
-                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/share/16M4VptGsZ/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/borjasdepool?igsh=eXk1azlzMXRwNGRw" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.tiktok.com/@depool.borjas.a?_t=ZS-8x4tKz08pRH&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>

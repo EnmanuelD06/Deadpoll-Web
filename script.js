@@ -68,32 +68,28 @@ backToTop.addEventListener('click', (e) => {
     });
 });
 
-// Filtrado del menú
-const categoryButtons = document.querySelectorAll('.category-btn');
-const menuItems = document.querySelectorAll('.menu-item');
+// Funcionalidad de filtrado del menú
+document.addEventListener('DOMContentLoaded', function() {
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    const menuItems = document.querySelectorAll('.menu-item');
 
-categoryButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        categoryButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remover clase active de todos los botones
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            // Agregar clase active al botón clickeado
+            button.classList.add('active');
 
-        const category = button.dataset.category;
-        const items = Array.from(menuItems);
+            const category = button.getAttribute('data-category');
 
-        requestAnimationFrame(() => {
-            items.forEach(item => {
-                if (category === 'todos' || item.dataset.category === category) {
+            menuItems.forEach(item => {
+                if (category === 'todos' || item.getAttribute('data-category') === category) {
                     item.style.display = 'block';
-                    requestAnimationFrame(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'translateY(0)';
-                    });
+                    // Reiniciar animación AOS
+                    item.setAttribute('data-aos', 'fade-up');
+                    AOS.refresh();
                 } else {
-                    item.style.opacity = '0';
-                    item.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        item.style.display = 'none';
-                    }, 300);
+                    item.style.display = 'none';
                 }
             });
         });
@@ -133,34 +129,6 @@ const testimonials = [
         rating: 4
     }
 ];
-
-const testimonialsSlider = document.querySelector('.testimonials-slider');
-let currentTestimonial = 0;
-
-function createTestimonialCard(testimonial) {
-    const starsHtml = Array(5).fill(0).map((_, i) => 
-        `<i class="${i < testimonial.rating ? 'fas' : 'far'} fa-star"></i>`
-    ).join('');
-    
-    return `
-        <div class="testimonial-card" data-aos="fade-up">
-            <div class="testimonial-rating">${starsHtml}</div>
-            <p class="testimonial-text">"${testimonial.text}"</p>
-            <p class="testimonial-author">- ${testimonial.name}</p>
-        </div>
-    `;
-}
-
-function updateTestimonials() {
-    requestAnimationFrame(() => {
-        testimonialsSlider.innerHTML = createTestimonialCard(testimonials[currentTestimonial]);
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-    });
-}
-
-// Inicializar testimonios
-updateTestimonials();
-const testimonialInterval = setInterval(updateTestimonials, 5000);
 
 // Smooth scroll para enlaces de navegación
 document.querySelectorAll('a[href^="#"]:not(.back-to-top)').forEach(anchor => {
@@ -216,16 +184,6 @@ document.querySelectorAll('.stats-section').forEach(section => {
     observer.observe(section);
 });
 
-// Limpiar intervalos cuando la página se oculta
-document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-        clearInterval(testimonialInterval);
-    } else {
-        updateTestimonials();
-        setInterval(updateTestimonials, 5000);
-    }
-});
-
 // Efecto parallax en el hero
 /*
 window.addEventListener('scroll', () => {
@@ -276,4 +234,11 @@ window.addEventListener('scroll', () => {
         header.classList.add('scroll-up');
     }
     lastScroll = currentScroll;
+});
+
+// Limpiar intervalos cuando la página se oculta
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        // Ya no necesitamos limpiar el intervalo de testimonios
+    }
 }); 
